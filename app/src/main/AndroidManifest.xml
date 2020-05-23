@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dressmeappcopia">
+    package="com.example.dressmeapp">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.dressmeappcopia.Activities.ConjuntoActivity"></activity>
+        <activity android:name="com.example.dressmeappcopia.Activities.HistorialActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.CabeceraAgrupacion"></activity>
+        <activity android:name="com.example.dressmeappcopia.Activities.HistorialActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.AlgoritmoRecomendador" />
+        <activity android:name="com.example.dressmeappcopia.Activities.MostrarDatosActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.Modificar_Prenda" />
+        <activity android:name="com.example.dressmeappcopia.Activities.AgruparPrendasActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.OrdenarPrendasActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.AniadirPrendaActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.ConfiguracionActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.ConfiguracionContraseniaActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.RegistroActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.RecomendadorActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.VestuarioActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.MenuPrincipalActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.PerfilConfiguracionActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

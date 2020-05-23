@@ -4,15 +4,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:paddingTop="64dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="64dp"
+                android:contentDescription="@string/app_name"
+                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+            <TextView
+                android:id="@+id/textBienvenida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:text="@string/bienvenida"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#199415"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorError"
+                tools:visibility="visible" />
+
+            <EditText
+                android:id="@+id/textNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="@string/nombre"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/textContrasenia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:ems="10"
+                android:hint="@string/contrasenia"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/iniciar_sesion" />
+
+            <Button
+                android:id="@+id/btnRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registro"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="#ED0E0E"
+                android:textSize="18sp" />
+
+            android:bottomRightRadius="2000dp"
+            android:bottomLeftRadius="2000dp"
+            android:topRightRadius="2000dp"
+            android:topLeftRadius="2000dp"
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
