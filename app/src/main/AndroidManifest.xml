@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dressmeapp">
+    package="com.example.dressmeappcopia">
 
     <application
         android:allowBackup="true"
@@ -9,15 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.dressmeappcopia.Activities.ConjuntoActivity"></activity>
+        <activity android:name="com.example.dressmeappcopia.Activities.ConjuntoActivity" />
         <activity android:name="com.example.dressmeappcopia.Activities.HistorialActivity" />
-        <activity android:name="com.example.dressmeappcopia.Activities.CabeceraAgrupacion"></activity>
-        <activity android:name="com.example.dressmeappcopia.Activities.HistorialActivity" />
+        <activity android:name="com.example.dressmeappcopia.Activities.CabeceraAgrupacion" />
         <activity android:name="com.example.dressmeappcopia.Activities.AlgoritmoRecomendador" />
         <activity android:name="com.example.dressmeappcopia.Activities.MostrarDatosActivity" />
         <activity android:name="com.example.dressmeappcopia.Activities.Modificar_Prenda" />
         <activity android:name="com.example.dressmeappcopia.Activities.AgruparPrendasActivity" />
-        <activity android:name="com.example.dressmeappcopia.Activities.OrdenarPrendasActivity" />
         <activity android:name="com.example.dressmeappcopia.Activities.AniadirPrendaActivity" />
         <activity android:name="com.example.dressmeappcopia.Activities.ConfiguracionActivity" />
         <activity android:name="com.example.dressmeappcopia.Activities.ConfiguracionContraseniaActivity" />
