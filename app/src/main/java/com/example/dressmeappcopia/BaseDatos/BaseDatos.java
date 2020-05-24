@@ -70,7 +70,8 @@ import android.database.sqlite.SQLiteOpenHelper;
                 "\"PANTALON\" INTEGER NOT NULL, \"ZAPATO\" INTEGER NOT NULL, \"COMPLEMENTO\" INTEGER )";
         db.execSQL(vsql);
 
-        db.execSQL("CREATE TABLE \"COLOR\" (\"ID\" INTEGER PRIMARY KEY  NOT NULL , \"NOMBRE\" VARCHAR(20) NOT NULL)");
+        db.execSQL("CREATE TABLE \"COLOR\" (\"ID\" INTEGER PRIMARY KEY  NOT NULL , \"NOMBRE\" VARCHAR(20) NOT NULL, \"HEX\" VARCHAR(7) NOT NULL)");
+        db.execSQL("CREATE TABLE COMBO_COLOR (IDA INTEGER NOT NULL, IDB INTEGER NOT NULL, PRIMARY KEY (IDA, IDB))");
         db.execSQL("CREATE TABLE \"TIPO\" (\"ID\" INTEGER PRIMARY KEY  NOT NULL , \"NOMBRE\" VARCHAR(20) NOT NULL)");
         db.execSQL("CREATE TABLE \"TALLA\" (\"ID\" INTEGER PRIMARY KEY  NOT NULL , \"NOMBRE\" VARCHAR(20) NOT NULL)");
     }
@@ -112,18 +113,18 @@ import android.database.sqlite.SQLiteOpenHelper;
     private void crearColor(SQLiteDatabase db){
 
 
-        db.execSQL( "INSERT INTO COLOR VALUES (1  , 'AZUL') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (2  , 'AMARILLO') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (3  , 'BLANCO') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (4  , 'GRIS') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (5  , 'MARRON') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (6  , 'MORADO') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (7  , 'NARANJA') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (8  , 'NEGRO') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (9  , 'ROJO') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (10  , 'ROSA') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (11  , 'VERDE') ") ;
-        db.execSQL( "INSERT INTO COLOR VALUES (12 , 'VIOLETA') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (1  , 'AZUL', '#0000FF') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (2  , 'AMARILLO', '#FFFF00') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (3  , 'BLANCO', '#FFFFFF') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (4  , 'GRIS', '#808080') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (5  , 'MARRON', '#804000') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (6  , 'MORADO', '#7D2787') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (7  , 'NARANJA', '#FC8F00') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (8  , 'NEGRO', '#000000') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (9  , 'ROJO', '#FF0000') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (10  , 'ROSA', '#F989C1') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (11  , 'VERDE', '#22ED0B') ") ;
+        db.execSQL( "INSERT INTO COLOR VALUES (12 , 'VIOLETA', '#8827C4') ") ;
 
     }
 

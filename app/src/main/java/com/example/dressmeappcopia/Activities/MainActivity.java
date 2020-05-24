@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.dressmeappcopia.BaseDatos.GestorBD;
 import com.example.dressmeappcopia.R;
+import com.example.dressmeappcopia.TestColorPicker;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText textContrasenia;
     private Button btnLogin;
     private Button btnRegistro;
+    private Button btnTestColorPicker;
 
     private Context contexto;
 
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         enlazarControles();
+        GestorBD.seleccionarBD("testcombocolor2.db");
     }
 
     private void enlazarControles() {
@@ -55,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnTestColorPicker = findViewById(R.id.btnTestColorPicker);
+        btnTestColorPicker.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                irATestColorPicker();
+            }
+        });
+
         contexto = getApplicationContext();
 
     }
@@ -69,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
         Intent nuevaActividad = new Intent(this, RegistroActivity.class);
         startActivity(nuevaActividad);
         finish();
+    }
+    private void irATestColorPicker() {
+        Intent nuevaActividad = new Intent(this, TestColorPicker.class);
+        startActivity(nuevaActividad);
     }
 
     private void login(String usuario, String pass) {

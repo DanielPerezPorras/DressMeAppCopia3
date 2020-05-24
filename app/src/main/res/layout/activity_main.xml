@@ -81,6 +81,12 @@
                 android:textColor="#ED0E0E"
                 android:textSize="18sp" />
 
+            <Button
+                android:id="@+id/btnTestColorPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="test color picker" />
+
             android:bottomRightRadius="2000dp"
             android:bottomLeftRadius="2000dp"
             android:topRightRadius="2000dp"
