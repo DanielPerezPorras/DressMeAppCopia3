@@ -1,7 +1,5 @@
 package com.example.dressmeappcopia.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,9 +8,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.dressmeappcopia.BaseDatos.GestorBD;
 import com.example.dressmeappcopia.R;
-import com.example.dressmeappcopia.TestColorPicker;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private EditText textContrasenia;
     private Button btnLogin;
     private Button btnRegistro;
-    private Button btnTestColorPicker;
 
     private Context contexto;
 
@@ -30,13 +28,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         enlazarControles();
-        GestorBD.seleccionarBD("testcombocolor2.db");
     }
 
     private void enlazarControles() {
 
         textError = findViewById(R.id.textError);
-        textError.setText("COPIA");
+        textError.setText("");
         textNombre = findViewById(R.id.textNombre);
         textContrasenia = findViewById(R.id.textContrasenia);
 
@@ -58,13 +55,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btnTestColorPicker = findViewById(R.id.btnTestColorPicker);
-        btnTestColorPicker.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                irATestColorPicker();
-            }
-        });
-
         contexto = getApplicationContext();
 
     }
@@ -79,10 +69,6 @@ public class MainActivity extends AppCompatActivity {
         Intent nuevaActividad = new Intent(this, RegistroActivity.class);
         startActivity(nuevaActividad);
         finish();
-    }
-    private void irATestColorPicker() {
-        Intent nuevaActividad = new Intent(this, TestColorPicker.class);
-        startActivity(nuevaActividad);
     }
 
     private void login(String usuario, String pass) {

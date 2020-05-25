@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.dressmeappcopia.R;
-
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.dressmeappcopia.R;
 
 public class ConfiguracionActivity extends AppCompatActivity {
     private TextView textView ;
@@ -58,15 +58,18 @@ public class ConfiguracionActivity extends AppCompatActivity {
     }
 
     private void cambioPrendas() {
-    //Por definir
+    Intent cambio = new Intent(this,CambioPrendasActivity.class);
+    startActivity(cambio);
     }
 
     private void cambioTallas() {
-    //Por definir
+    Intent cambio = new Intent(this,CambioTallasActivity.class);
+    startActivity(cambio);
     }
 
     private void cambiaColor() {
-        //Por definir
+        Intent cambio = new Intent(this,CambioColorActivity.class);
+        startActivity(cambio);
     }
 
     private void cambiaPerfil() {

@@ -6,11 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dressmeappcopia.R;
 
-public class PrendaActivity extends AppCompatActivity {
+public class CambioTallasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prenda_view);
+        setContentView(R.layout.activity_cambio_tallas);
+
     }
 }

@@ -1,12 +1,12 @@
 package com.example.dressmeappcopia.Activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.dressmeappcopia.BaseDatos.GestorBD;
 import com.example.dressmeappcopia.Objetos.Conjunto;
@@ -81,12 +81,13 @@ public class HistorialActivity extends AppCompatActivity {
         TextView color = (TextView) v.findViewById(R.id.prenda_color);
         TextView talla = (TextView) v.findViewById(R.id.prenda_talla);
 
-        String tipoText = GestorBD.Dar_Tipo(this, prenda.tipo);
-        String tallaText = GestorBD.Dar_Talla(this, prenda.talla);
+        String colorText = GestorBD.get_nombre_tabla(this, "color", prenda.color);
+        String tipoText = GestorBD.get_nombre_tabla(this, "tipo", prenda.tipo);
+        String tallaText = GestorBD.get_nombre_tabla(this, "talla", prenda.talla);
 
         nombre.setText(prenda.nombre);
+        color.setText(colorText);
         tipo.setText(tipoText);
-        color.setText(prenda.color);
         talla.setText(tallaText);
 
         TableLayout t = (TableLayout) v.findViewById(R.id.boton_prenda);
