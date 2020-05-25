@@ -43,7 +43,7 @@ public class AniadirPrendaActivity extends AppCompatActivity {
         Bcancelar = findViewById(R.id.boton_cancelar);
 
         List<String> colores = GestorBD.get_nombres_tabla(this, "color");
-        ArrayAdapter<String> adapterColores = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, colores);
+        ArrayAdapter<String> adapterColores = new ArrayAdapter<>(this, R.layout.spinner_color_prenda, colores);
         adapterColores.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         Scolor.setAdapter(adapterColores);
 
